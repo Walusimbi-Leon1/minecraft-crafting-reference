@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Minecraft Crafting Reference</title>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --card: #16213e;
+    --accent: #e94560;
+    --gold: #f5c518;
+    --iron: #c0c0c0;
+    --diamond: #4ad9d9;
+    --redstone: #e04040;
+    --green: #4caf50;
+    --text: #eee;
+    --muted: #999;
+  }
+  @page { margin: 1.5cm; size: A4; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    max-width: 1000px; margin: 0 auto; padding: 30px 20px;
+  }
+  h1 { font-size: 2.2rem; color: var(--gold); margin-bottom: 0.3rem; }
+  .subtitle { color: var(--muted); margin-bottom: 2rem; font-size: 0.95rem; }
+  h2 {
+    font-size: 1.5rem; color: var(--accent); margin: 2rem 0 1rem;
+    border-bottom: 2px solid #333; padding-bottom: 6px;
+  }
+  h3 { font-size: 1.1rem; color: var(--diamond); margin: 1rem 0 0.5rem; }
+  .recipe-group {
+    display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 2rem;
+  }
+  .recipe {
+    background: var(--card); border-radius: 10px; padding: 18px;
+    width: 320px; flex-shrink: 0;
+  }
+  .recipe h4 { font-size: 1rem; margin-bottom: 8px; color: #fff; }
+  .recipe .yield { font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+  .grid {
+    display: inline-grid; grid-template-columns: repeat(3, 56px);
+    gap: 3px; margin-bottom: 8px;
+  }
+  .cell {
+    width: 56px; height: 56px; border: 1px solid #444; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; text-align: center; line-height: 1.2;
+    background: #0d0d1a; color: #ccc; padding: 2px;
+  }
+  .cell.empty { background: #111; color: #444; }
+  .cell.diamond { background: #1a3a3a; color: var(--diamond); border-color: var(--diamond); font-weight: bold; }
+  .cell.gold { background: #3a3a1a; color: var(--gold); border-color: var(--gold); font-weight: bold; }
+  .cell.iron { background: #2a2a2a; color: var(--iron); border-color: var(--iron); font-weight: bold; }
+  .cell.redstone { background: #3a1a1a; color: var(--redstone); border-color: var(--redstone); font-weight: bold; }
+  .cell.plank { background: #3a2a1a; color: #d4a55a; border-color: #8a6a3a; font-weight: bold; }
+  .cell.cobble { background: #2a2a2a; color: #aaa; border-color: #666; }
+  .cell.obsidian { background: #1a1a2a; color: #6688cc; border-color: #4466aa; font-weight: bold; }
+  .cell.stick { background: #2a1a0a; color: #c8a050; border-color: #886a30; font-weight: bold; }
+  .cell.special { background: #2a1a2a; color: #c060e0; border-color: #9040b0; font-weight: bold; }
+  .cell.wood { background: #3a2a1a; color: #b89050; border-color: #886a3a; }
+  .cell.stone { background: #2a2a2a; color: #aaa; border-color: #666; }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 15px 0; font-size: 0.85rem; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; border: 1px solid #555; }
+  .swatch.diamond { background: #1a3a3a; } .swatch.gold { background: #3a3a1a; }
+  .swatch.iron { background: #2a2a2a; } .swatch.redstone { background: #3a1a1a; }
+  .swatch.plank { background: #3a2a1a; } .swatch.obsidian { background: #1a1a2a; }
+  .swatch.stick { background: #2a1a0a; } .swatch.special { background: #2a1a2a; }
+  .swatch.cobble { background: #2a2a2a; } .swatch.wood { background: #3a2a1a; }
+  @media print {
+    body { background: #fff; color: #000; padding: 0; }
+    .recipe { background: #f5f5f5; break-inside: avoid; }
+    .cell { background: #eee; color: #333; }
+    h1 { color: #b8860b; } h2 { color: #c0392b; } h3 { color: #1a7a7a; }
+    .cell.diamond { background: #d0f0f0; color: #006060; border-color: #006060; }
+    .cell.gold { background: #f0f0d0; color: #8a6a00; border-color: #8a6a00; }
+    .cell.iron { background: #e0e0e0; color: #555; border-color: #555; }
+    .cell.redstone { background: #f0d0d0; color: #a02020; border-color: #a02020; }
+    .cell.plank { background: #e8d8c0; color: #7a5a2a; border-color: #7a5a2a; }
+    .cell.cobble { background: #ddd; color: #555; border-color: #888; }
+    .cell.obsidian { background: #d0d8f0; color: #334488; border-color: #334488; }
+    .cell.stick { background: #e8d0b0; color: #7a5a20; border-color: #7a5a20; }
+    .cell.empty { background: #fafafa; color: #bbb; }
+    .recipe h4 { color: #000; } .subtitle { color: #888; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Minecraft Crafting Reference</h1>
+<p class="subtitle">A complete visual guide to placing items on the 3×3 crafting table. By Walusimbi Leon (SGSS) &middot; Public Domain</p>
+
+<div class="legend">
+  <span class="legend-item"><span class="swatch diamond"></span> Diamond</span>
+  <span class="legend-item"><span class="swatch gold"></span> Gold</span>
+  <span class="legend-item"><span class="swatch iron"></span> Iron</span>
+  <span class="legend-item"><span class="swatch redstone"></span> Redstone</span>
+  <span class="legend-item"><span class="swatch plank"></span> Planks</span>
+  <span class="legend-item"><span class="swatch cobble"></span> Cobblestone</span>
+  <span class="legend-item"><span class="swatch obsidian"></span> Obsidian</span>
+  <span class="legend-item"><span class="swatch stick"></span> Stick</span>
+  <span class="legend-item"><span class="swatch special"></span> Special Item</span>
+  <span class="legend-item"><span class="swatch wood"></span> Wood/Log</span>
+</div>
+
+<!-- ======================================================================== -->
+<h2>1. Tools</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Diamond Pickaxe</h4>
+<p class="yield">Yield: 1 pickaxe</p>
+<div class="grid">
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell diamond">*</div>
+  <div class="cell empty"></div><div class="cell stick">|</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell stick">|</div><div class="cell empty"></div>
+</div>
+<div><strong>Tip:</strong> First diamond item you should make. Swap diamond with iron/wood for lower tiers.</div>
+</div>
+
+<div class="recipe">
+<h4>Diamond Sword</h4>
+<p class="yield">Yield: 1 sword</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell diamond">*</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell diamond">*</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell stick">|</div><div class="cell empty"></div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Diamond Axe</h4>
+<p class="yield">Yield: 1 axe</p>
+<div class="grid">
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell empty"></div>
+  <div class="cell diamond">*</div><div class="cell stick">|</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell stick">|</div><div class="cell empty"></div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Diamond Shovel</h4>
+<p class="yield">Yield: 1 shovel</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell diamond">*</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell stick">|</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell stick">|</div><div class="cell empty"></div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Diamond Hoe</h4>
+<p class="yield">Yield: 1 hoe</p>
+<div class="grid">
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell stick">|</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell stick">|</div><div class="cell empty"></div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Flint and Steel</h4>
+<p class="yield">Yield: 1 flint &amp; steel</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell iron">Fe</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell special">Flint</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Shears</h4>
+<p class="yield">Yield: 1 shears</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell iron">Fe</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell iron">Fe</div>
+</div>
+<p>Iron on one diagonal. Collect leaves, get wool without killing sheep, mine cobwebs.</p>
+</div>
+
+<div class="recipe">
+<h4>Fishing Rod</h4>
+<p class="yield">Yield: 1 fishing rod</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell stick">|</div>
+  <div class="cell empty"></div><div class="cell stick">|</div><div class="cell special">String</div>
+  <div class="cell stick">|</div><div class="cell empty"></div><div class="cell empty"></div>
+</div>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>2. Armor</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Diamond Helmet</h4>
+<p class="yield">Yield: 1 helmet | 5 diamonds</p>
+<div class="grid">
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell diamond">*</div>
+  <div class="cell diamond">*</div><div class="cell empty"></div><div class="cell diamond">*</div>
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+</div>
+<p><strong>Note:</strong> Replace diamond with iron, gold, or leather for lower tiers.</p>
+</div>
+
+<div class="recipe">
+<h4>Diamond Chestplate</h4>
+<p class="yield">Yield: 1 chestplate | 8 diamonds</p>
+<div class="grid">
+  <div class="cell diamond">*</div><div class="cell empty"></div><div class="cell diamond">*</div>
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell diamond">*</div>
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell diamond">*</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Diamond Leggings</h4>
+<p class="yield">Yield: 1 leggings | 7 diamonds</p>
+<div class="grid">
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell diamond">*</div>
+  <div class="cell empty"></div><div class="cell diamond">*</div><div class="cell empty"></div>
+  <div class="cell diamond">*</div><div class="cell empty"></div><div class="cell diamond">*</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Diamond Boots</h4>
+<p class="yield">Yield: 1 boots | 4 diamonds</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell diamond">*</div><div class="cell empty"></div><div class="cell diamond">*</div>
+  <div class="cell diamond">*</div><div class="cell empty"></div><div class="cell diamond">*</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Shield</h4>
+<p class="yield">Yield: 1 shield</p>
+<div class="grid">
+  <div class="cell plank">=</div><div class="cell iron">Fe</div><div class="cell plank">=</div>
+  <div class="cell plank">=</div><div class="cell plank">=</div><div class="cell plank">=</div>
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+</div>
+<p>Blocks 100% damage when raised. One of the best early-game items.</p>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>3. Utility &amp; Navigation</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Compass</h4>
+<p class="yield">Yield: 1 compass</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell iron">Fe</div><div class="cell empty"></div>
+  <div class="cell iron">Fe</div><div class="cell redstone">@</div><div class="cell iron">Fe</div>
+  <div class="cell empty"></div><div class="cell iron">Fe</div><div class="cell empty"></div>
+</div>
+<p>Points to world spawn. Spins randomly in Nether/End.</p>
+</div>
+
+<div class="recipe">
+<h4>Clock</h4>
+<p class="yield">Yield: 1 clock</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell gold">Au</div><div class="cell empty"></div>
+  <div class="cell gold">Au</div><div class="cell redstone">@</div><div class="cell gold">Au</div>
+  <div class="cell empty"></div><div class="cell gold">Au</div><div class="cell empty"></div>
+</div>
+<p>Tells time (sun/moon). Works underground. Gimmicky but cool.</p>
+</div>
+
+<div class="recipe">
+<h4>Bucket</h4>
+<p class="yield">Yield: 1 bucket</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell iron">Fe</div><div class="cell empty"></div><div class="cell iron">Fe</div>
+  <div class="cell empty"></div><div class="cell iron">Fe</div><div class="cell empty"></div>
+</div>
+<p>Carry water, lava, or milk. Water bucket negates fall damage if placed under you.</p>
+</div>
+
+<div class="recipe">
+<h4>Cauldron</h4>
+<p class="yield">Yield: 1 cauldron</p>
+<div class="grid">
+  <div class="cell iron">Fe</div><div class="cell empty"></div><div class="cell iron">Fe</div>
+  <div class="cell iron">Fe</div><div class="cell empty"></div><div class="cell iron">Fe</div>
+  <div class="cell iron">Fe</div><div class="cell iron">Fe</div><div class="cell iron">Fe</div>
+</div>
+<p>Holds water, removes dye from leather armor, holds lava.</p>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>4. Machines &amp; Contraptions</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Piston</h4>
+<p class="yield">Yield: 1 piston</p>
+<div class="grid">
+  <div class="cell plank">=</div><div class="cell plank">=</div><div class="cell plank">=</div>
+  <div class="cell cobble">O</div><div class="cell iron">Fe</div><div class="cell cobble">O</div>
+  <div class="cell cobble">O</div><div class="cell redstone">@</div><div class="cell cobble">O</div>
+</div>
+<p>Pushes blocks. Combine with sticky piston (slime ball) to pull too. Foundation of redstone contraptions.</p>
+</div>
+
+<div class="recipe">
+<h4>Sticky Piston</h4>
+<p class="yield">Yield: 1 sticky piston</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell special">Slime</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell special">Piston</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+</div>
+<p>Place a slime ball on top of a piston. Pulls blocks back too.</p>
+</div>
+
+<div class="recipe">
+<h4>Observer</h4>
+<p class="yield">Yield: 1 observer</p>
+<div class="grid">
+  <div class="cell cobble">O</div><div class="cell cobble">O</div><div class="cell cobble">O</div>
+  <div class="cell redstone">@</div><div class="cell special">Quartz</div><div class="cell redstone">@</div>
+  <div class="cell cobble">O</div><div class="cell cobble">O</div><div class="cell cobble">O</div>
+</div>
+<p>Emits redstone pulse when the block it faces changes. Automate farms.</p>
+</div>
+
+<div class="recipe">
+<h4>Hopper</h4>
+<p class="yield">Yield: 1 hopper</p>
+<div class="grid">
+  <div class="cell iron">Fe</div><div class="cell empty"></div><div class="cell iron">Fe</div>
+  <div class="cell iron">Fe</div><div class="cell special">Chest</div><div class="cell iron">Fe</div>
+  <div class="cell empty"></div><div class="cell iron">Fe</div><div class="cell empty"></div>
+</div>
+<p>Collects items above it, feeds into inventory below. Essential for auto-farms and auto-smelters.</p>
+</div>
+
+<div class="recipe">
+<h4>Dispenser</h4>
+<p class="yield">Yield: 1 dispenser</p>
+<div class="grid">
+  <div class="cell cobble">O</div><div class="cell cobble">O</div><div class="cell cobble">O</div>
+  <div class="cell cobble">O</div><div class="cell special">Bow</div><div class="cell cobble">O</div>
+  <div class="cell cobble">O</div><div class="cell redstone">@</div><div class="cell cobble">O</div>
+</div>
+<p>Shoots items when activated. Place arrows → auto-bow, water bucket → places water, bonemeal → fertilizes.</p>
+</div>
+
+<div class="recipe">
+<h4>Dropper</h4>
+<p class="yield">Yield: 1 dropper</p>
+<div class="grid">
+  <div class="cell cobble">O</div><div class="cell cobble">O</div><div class="cell cobble">O</div>
+  <div class="cell cobble">O</div><div class="cell redstone">@</div><div class="cell cobble">O</div>
+  <div class="cell cobble">O</div><div class="cell redstone">@</div><div class="cell cobble">O</div>
+</div>
+<p>Drops items out. Unlike dispenser, it just spits items — doesn't activate them.</p>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>5. Transportation</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Minecart</h4>
+<p class="yield">Yield: 1 minecart</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell iron">Fe</div><div class="cell empty"></div><div class="cell iron">Fe</div>
+  <div class="cell iron">Fe</div><div class="cell iron">Fe</div><div class="cell iron">Fe</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Rail</h4>
+<p class="yield">Yield: 16 rails</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell iron">Fe</div><div class="cell empty"></div><div class="cell iron">Fe</div>
+  <div class="cell iron">Fe</div><div class="cell stick">|</div><div class="cell iron">Fe</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Powered Rail</h4>
+<p class="yield">Yield: 6 rails</p>
+<div class="grid">
+  <div class="cell gold">Au</div><div class="cell stick">|</div><div class="cell gold">Au</div>
+  <div class="cell gold">Au</div><div class="cell redstone">@</div><div class="cell gold">Au</div>
+  <div class="cell gold">Au</div><div class="cell stick">|</div><div class="cell gold">Au</div>
+</div>
+<p>Accelerates minecarts. Needs redstone power to work. Place every ~32 blocks for speed.</p>
+</div>
+
+<div class="recipe">
+<h4>Detector Rail</h4>
+<p class="yield">Yield: 6 rails</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell iron">Fe</div><div class="cell redstone">@</div><div class="cell iron">Fe</div>
+  <div class="cell iron">Fe</div><div class="cell stone">S</div><div class="cell iron">Fe</div>
+</div>
+<p>Stone pressure plate in center-bottom. Emits redstone when minecart passes over.</p>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>6. Enchanting &amp; Upgrades</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Enchanting Table</h4>
+<p class="yield">Yield: 1 table</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell diamond">*</div><div class="cell empty"></div>
+  <div class="cell obsidian">#</div><div class="cell obsidian">#</div><div class="cell obsidian">#</div>
+  <div class="cell obsidian">#</div><div class="cell special">Book</div><div class="cell obsidian">#</div>
+</div>
+<p><strong>Book:</strong> 3 paper + 1 leather. Make this as soon as you have 2 diamonds + 4 obsidian.</p>
+</div>
+
+<div class="recipe">
+<h4>Anvil</h4>
+<p class="yield">Yield: 1 anvil</p>
+<div class="grid">
+  <div class="cell iron">#</div><div class="cell iron">#</div><div class="cell iron">#</div>
+  <div class="cell empty"></div><div class="cell iron">Fe</div><div class="cell empty"></div>
+  <div class="cell iron">Fe</div><div class="cell iron">Fe</div><div class="cell iron">Fe</div>
+</div>
+<p><strong>Top row = 3 iron blocks</strong> (27 ingots). Bottom row = 4 ingots. Repair items, combine enchantments.</p>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>7. Consumables &amp; Food</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Golden Apple</h4>
+<p class="yield">Yield: 1 golden apple</p>
+<div class="grid">
+  <div class="cell gold">#</div><div class="cell gold">#</div><div class="cell gold">#</div>
+  <div class="cell gold">#</div><div class="cell special">Apple</div><div class="cell gold">#</div>
+  <div class="cell gold">#</div><div class="cell gold">#</div><div class="cell gold">#</div>
+</div>
+<p><strong>8 gold blocks</strong> (72 ingots!) + 1 apple. Absorption II + Regen II. Lifesaver for Nether/raids/final fights.</p>
+</div>
+
+<div class="recipe">
+<h4>Golden Carrot</h4>
+<p class="yield">Yield: 1 golden carrot</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell gold">#</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell gold">#</div><div class="cell empty"></div>
+</div>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>8. Basic Redstone Components</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Redstone Repeater</h4>
+<p class="yield">Yield: 1 repeater</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell redstone">@</div><div class="cell redstone">@</div><div class="cell redstone">@</div>
+  <div class="cell stone">S</div><div class="cell redstone">@</div><div class="cell stone">S</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Redstone Comparator</h4>
+<p class="yield">Yield: 1 comparator</p>
+<div class="grid">
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+  <div class="cell special">Quartz</div><div class="cell redstone">@</div><div class="cell special">Quartz</div>
+  <div class="cell stone">S</div><div class="cell redstone">@</div><div class="cell stone">S</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Redstone Block</h4>
+<p class="yield">Yield: 1 redstone block</p>
+<div class="grid">
+  <div class="cell redstone">@</div><div class="cell redstone">@</div><div class="cell redstone">@</div>
+  <div class="cell redstone">@</div><div class="cell redstone">@</div><div class="cell redstone">@</div>
+  <div class="cell redstone">@</div><div class="cell redstone">@</div><div class="cell redstone">@</div>
+</div>
+<p>Permanent redstone power source. Also powers beacons.</p>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>9. Storage &amp; Building</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Chest</h4>
+<p class="yield">Yield: 1 chest</p>
+<div class="grid">
+  <div class="cell plank">=</div><div class="cell plank">=</div><div class="cell plank">=</div>
+  <div class="cell plank">=</div><div class="cell empty"></div><div class="cell plank">=</div>
+  <div class="cell plank">=</div><div class="cell plank">=</div><div class="cell plank">=</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Furnace</h4>
+<p class="yield">Yield: 1 furnace</p>
+<div class="grid">
+  <div class="cell cobble">O</div><div class="cell cobble">O</div><div class="cell cobble">O</div>
+  <div class="cell cobble">O</div><div class="cell empty"></div><div class="cell cobble">O</div>
+  <div class="cell cobble">O</div><div class="cell cobble">O</div><div class="cell cobble">O</div>
+</div>
+</div>
+
+<div class="recipe">
+<h4>Crafting Table</h4>
+<p class="yield">Yield: 1 crafting table</p>
+<div class="grid">
+  <div class="cell plank">=</div><div class="cell plank">=</div><div class="cell empty"></div>
+  <div class="cell plank">=</div><div class="cell plank">=</div><div class="cell empty"></div>
+  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
+</div>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>10. Nether Portal</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Nether Portal (not craftable)</h4>
+<p class="yield">Requires: 10-14 obsidian + flint &amp; steel</p>
+<div class="grid">
+  <div class="cell obsidian">#</div><div class="cell obsidian">#</div><div class="cell obsidian">#</div>
+  <div class="cell obsidian">#</div><div class="cell empty"></div><div class="cell obsidian">#</div>
+  <div class="cell obsidian">#</div><div class="cell empty"></div><div class="cell obsidian">#</div>
+  <div class="cell obsidian">#</div><div class="cell obsidian">#</div><div class="cell obsidian">#</div>
+</div>
+<p>Build a vertical frame of obsidian (min 4×5, max 23×23). Light inside with flint &amp; steel. Get obsidian by pouring water over lava source blocks.</p>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>11. Block Crafting (Compression)</h2>
+<div class="recipe-group">
+
+<div class="recipe">
+<h4>Block of Diamond</h4>
+<p class="yield">Yield: 1 block</p>
+<div class="grid">
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell diamond">*</div>
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell diamond">*</div>
+  <div class="cell diamond">*</div><div class="cell diamond">*</div><div class="cell diamond">*</div>
+</div>
+<p>9 diamonds → 1 block. Compact storage. Use for beacon bases.</p>
+</div>
+
+<div class="recipe">
+<h4>Block of Iron</h4>
+<p class="yield">Yield: 1 block</p>
+<div class="grid">
+  <div class="cell iron">Fe</div><div class="cell iron">Fe</div><div class="cell iron">Fe</div>
+  <div class="cell iron">Fe</div><div class="cell iron">Fe</div><div class="cell iron">Fe</div>
+  <div class="cell iron">Fe</div><div class="cell iron">Fe</div><div class="cell iron">Fe</div>
+</div>
+<p>9 iron → 1 block. Use for anvil top row (3 blocks), beacon bases, iron golems.</p>
+</div>
+
+<div class="recipe">
+<h4>Block of Gold</h4>
+<p class="yield">Yield: 1 block</p>
+<div class="grid">
+  <div class="cell gold">Au</div><div class="cell gold">Au</div><div class="cell gold">Au</div>
+  <div class="cell gold">Au</div><div class="cell gold">Au</div><div class="cell gold">Au</div>
+  <div class="cell gold">Au</div><div class="cell gold">Au</div><div class="cell gold">Au</div>
+</div>
+<p>9 gold → 1 block. Used for golden apple (8), beacon bases, piglin bartering.</p>
+</div>
+
+</div>
+
+<!-- ======================================================================== -->
+<h2>12. Quick Reference: Crafting Positions</h2>
+
+<table style="width:100%;border-collapse:collapse;margin-top:10px;font-size:0.85rem;">
+<tr style="background:var(--card);color:var(--gold);">
+  <th style="padding:8px;text-align:left;border-bottom:2px solid #444;">Item</th>
+  <th style="padding:8px;text-align:center;border-bottom:2px solid #444;">Grid Pattern (top→bottom)</th>
+  <th style="padding:8px;text-align:center;border-bottom:2px solid #444;">Materials</th>
+</tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Pickaxe</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">XXX / _S_ / _S_</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">3 material + 2 sticks</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Axe</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">XX_ / XS_ / _S_</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">3 material + 2 sticks</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Sword</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">_X_ / _X_ / _S_</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">2 material + 1 stick</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Shovel</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">_X_ / _S_ / _S_</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">1 material + 2 sticks</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Hoe</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">XX_ / _S_ / _S_</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">2 material + 2 sticks</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Helmet</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">XXX / X_X</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">5 material</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Chestplate</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">X_X / XXX / XXX</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">8 material</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Leggings</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">XXX / _X_ / X_X</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">7 material</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Boots</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">X_X / X_X</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">4 material</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Block (compressed)</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">XXX / XXX / XXX</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">9 ingots/gems</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Shield</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">PFeP / PPP</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">6 planks + 1 iron</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Bucket</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">Fe_Fe / _Fe_</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">3 iron ingots</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Compass</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">_Fe_ / Fe@Fe / _Fe_</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">4 iron + 1 redstone</td></tr>
+<tr><td style="padding:6px;border-bottom:1px solid #333;">Piston</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">PPP / CFeC / C@C</td><td style="padding:6px;text-align:center;border-bottom:1px solid #333;">3 planks, 4 cobble, 1 iron, 1 redstone</td></tr>
+</table>
+
+<p style="margin-top:30px;color:var(--muted);font-size:0.85rem;text-align:center;">
+Legend: X = material (diamond/iron/gold/stone/wood) &middot; S = stick &middot; P = plank &middot; C = cobblestone &middot; Fe = iron &middot; @ = redstone &middot; # = block &middot; Au = gold &middot; _ = empty
+</p>
+
+</body>
+</html>
