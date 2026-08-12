@@ -31,11 +31,11 @@ const COVERED_FILE = "covered.json";
 const BUILD_SITE = cfg.buildSite || "python3 build_site.py";
 const TARGET_WORDS = cfg.targetWords || 2000;
 const MIN_WORDS = cfg.minWords || 1500;
-const MAX_WORDS = cfg.maxWords || 3200;
+const MAX_WORDS = cfg.maxWords || 2600;
 const MIN_ITEMS = cfg.minItems || 4;
 const API_TIMEOUT_MS = cfg.apiTimeoutMs || 600000;
 const MAX_TOKENS = cfg.maxTokens || 24000;
-const MAX_TRIES = 6;
+const MAX_TRIES = 4;
 
 const BASE_URL = process.env.OPENCODE_BASE_URL || "https://opencode.ai/zen/v1";
 const MODEL = process.env.MODEL || "big-pickle";
@@ -94,8 +94,9 @@ async function generateChapter(prompt, keyIndex) {
     `You are the crafting chronicler for "${TITLE}" by ${cfg.author || "Walusimbi Leon (SGSS)"}.\n` +
     `You write precise, playable Minecraft crafting reference entries in the book's house style: ` +
     `exact ASCII crafting grids, exact material quantities, and zero fluff.\n` +
-    `IMPORTANT: plan briefly, then write. Do not spend excessive hidden reasoning; your token ` +
-    `budget must go to the content itself.\n` +
+    `HARD RULE: do NOT think at length. Do not analyze, do not plan, do not list constraints. ` +
+    `Write the answer IMMEDIATELY — your very first output token must be the chapter heading. ` +
+    `If you spend tokens on reasoning instead of content, you fail.\n` +
     `Write ONLY the chapter content described in the user prompt — no commentary, no recaps, ` +
     `no meta-notes, no "here is" introductions.`;
 
@@ -182,7 +183,7 @@ async function main() {
 
   // Items covered so far (manifest + parsed from the book) — no repeats allowed
   const coveredSet = new Set([...covered, ...extractItemNames(md)].map((s) => s.toLowerCase()));
-  const coveredList = [...coveredSet].slice(-60).join(", ");
+  const coveredList = [...coveredSet].slice(-40).join(", ");
 
   const prompt =
     `BOOK: ${cfg.description || ""}\n\n` +
@@ -214,7 +215,9 @@ async function main() {
     `   For furnace/brewing/smithing/stonecutter recipes, adapt the grid: state the fuel/inputs ` +
     `clearly (e.g. "Furnace: 1 iron ore + 1 coal → 1 iron ingot").\n` +
     `4. A closing line: "***" then a one-line hook for the next chapter (e.g. "Next: the Nether awaits.").\n\n` +
-    `DO NOT cover any of these already-documented items: ${coveredList || "(none)"}.\n` +
+    `START YOUR REPLY DIRECTLY WITH: "## CHAPTER ${chapterN} — <TITLE>". Nothing before it.\n` +
+    `STRICT LENGTH: the chapter MUST be 1700-2300 words. If it is longer than 2500 words it will be rejected. Do not pad, do not repeat.\n` +
+    `DO NOT cover any of these already-documented items (each is already in the book): ${coveredList || "(none)"}.\n` +
     `Every item in this chapter must be NEW to the book. All quantities and recipes must be ` +
     `accurate for current Minecraft (1.20+/1.21).\n\n` +
     `LENGTH: about ${TARGET_WORDS} words total.\n\n` +
