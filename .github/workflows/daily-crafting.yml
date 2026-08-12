@@ -1,12 +1,5 @@
 name: Daily Crafting Writing
 
-# Writes the next ~2,000-word chapter of the Minecraft Crafting Reference
-# every day using the big-pickle model on opencode.ai. Each chapter covers
-# new items with exact recipes — progressively more advanced content, no
-# repeats (tracked in covered.json). Runs from GitHub runners (fresh IPs)
-# so opencode.ai never rate-limits us. Pushing to main auto-deploys
-# GitHub Pages.
-
 on:
   schedule:
     - cron: "0 7 * * *"
@@ -43,10 +36,10 @@ jobs:
       - name: Write next chapter
         run: node scripts/write-chapter.js
         env:
-          OPENCODE_API_KEY: *** secrets.OPENCODE_API_KEY }}
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
           OPENCODE_API_KEY_2: ${{ secrets.OPENCODE_API_KEY_2 }}
           OPENCODE_API_KEY_3: ${{ secrets.OPENCODE_API_KEY_3 }}
           OPENCODE_API_KEY_4: ${{ secrets.OPENCODE_API_KEY_4 }}
           OPENCODE_API_KEY_5: ${{ secrets.OPENCODE_API_KEY_5 }}
-          GH_PUSH_TOKEN: *** secrets.GH_PUSH_TOKEN }}
+          GH_PUSH_TOKEN: ${{ secrets.GH_PUSH_TOKEN }}
           MODEL: big-pickle
