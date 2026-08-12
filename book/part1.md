@@ -1000,6 +1000,243 @@ How the furnace works: Place the ingredient in the top slot, fuel (coal, charcoa
 
 **Tip:** Place on top of a pyramid of iron/gold/diamond/emerald/copper/netherite blocks. Grants status effects (haste, speed, jump boost, resistance, strength, regeneration) to nearby players.
 
+## CHAPTER 15 — THE BREWING ARTS
+
+The Nether portal stands behind you; the fortress ahead holds the ingredients of a new science. Brewing converts the hostile resources of the Nether — blaze rods, nether wart, magma cream — into bottled power. This chapter covers the four essential brewing ingredients you must master, the Awkward Potion base, and the drinkable and throwable potions that will carry you through the rest of the game.
+
+### Blaze Powder
+
+**Category:** Materials
+**Tier:** Mid-game
+
+**Recipe**
+```
+[ ][ ][ ]
+[ ][B][ ]
+[ ][ ][ ]
+```
+**Yield:** 2 Blaze Powder
+
+**Legend:** B = Blaze Rod
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Blaze Rod | 1 | Dropped by blazes in Nether fortresses; they fly and shoot fireballs, so come with a bow or strong melee and fire resistance |
+
+**How to craft:** Place the blaze rod in any single cell of the 3×3 crafting grid. The recipe is shapeless, so position does not matter. Take the 2 blaze powder from the output slot, then repeat for every rod you collected.
+
+**Uses:** Blaze powder is the fuel that runs the brewing stand — one powder lasts for 20 brews, far more efficient than you might expect. It is also the ingredient for Potion of Strength, and it combines with ender pearls to craft Eyes of Ender, which you need to locate and activate the End portal.
+
+**Progression tip:** Blazes drop 0–1 rods per kill, so light up the fortress corridor and farm until you have at least 4 rods before heading home. Two rods yield four powder: one for fuel, and three for Strength potions and Eyes of Ender.
+
+### Glistering Melon Slice
+
+**Category:** Materials
+**Tier:** Mid-game
+
+**Recipe**
+```
+[G][G][G]
+[G][M][G]
+[G][G][G]
+```
+**Yield:** 1 Glistering Melon Slice
+
+**Legend:** G = Gold Nugget, M = Melon Slice
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Gold Nugget | 8 | Craft 1 gold ingot into 9 nuggets, smelt gold tools/armor, or barter with piglins |
+| Melon Slice | 1 | Break a melon block; find melons in jungle biomes or buy slices from village farmers |
+
+**How to craft:** Place the melon slice in the center cell of the crafting grid. Surround it completely with 8 gold nuggets in every other cell — the classic ring pattern. Collect 1 glistering melon slice from the output.
+
+**Uses:** It has no food value — never eat it. Its only purpose is brewing: added to an Awkward Potion in the brewing stand, it produces the Potion of Healing, the most reliable instant health in the game.
+
+**Progression tip:** One gold ingot yields exactly 9 nuggets, so each ingot buys one glistering melon slice. Start a melon farm early so you never run out of slices for healing potions.
+
+### Magma Cream
+
+**Category:** Materials
+**Tier:** Mid-game
+
+**Recipe**
+```
+[B][S][ ]
+[ ][ ][ ]
+[ ][ ][ ]
+```
+**Yield:** 1 Magma Cream
+
+**Legend:** B = Blaze Powder, S = Slimeball
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Blaze Powder | 1 | Crafted from blaze rods (see Blaze Powder entry) |
+| Slimeball | 1 | Dropped by slimes in swamps and slime chunks; use a looting sword for better rates |
+
+**How to craft:** Place the blaze powder and slimeball anywhere in the crafting grid. The recipe is shapeless, so the arrangement does not matter. Collect 1 magma cream from the output slot.
+
+**Uses:** Magma cream brews the Potion of Fire Resistance, one of the most important potions in the game. It is also dropped by magma cubes in the Nether as an alternative source, and a 2×2 square of magma cream crafts a magma block, which emits light and damages mobs that stand on it.
+
+**Progression tip:** Do not waste time hunting magma cubes for cream — craft it instead. Slimes spawn in swamps at night and in slime chunks below y-level 40; light up a swamp clearing for a simple slime farm.
+
+### Fermented Spider Eye
+
+**Category:** Materials
+**Tier:** Mid-game
+
+**Recipe**
+```
+[E][M][S]
+[ ][ ][ ]
+[ ][ ][ ]
+```
+**Yield:** 1 Fermented Spider Eye
+
+**Legend:** E = Spider Eye, M = Brown Mushroom, S = Sugar
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Spider Eye | 1 | Dropped by spiders and cave spiders (0–1 per kill) |
+| Brown Mushroom | 1 | Found in caves, forests, and the Nether; also in mushroom field biomes |
+| Sugar | 1 | Craft 1 sugar cane → 1 sugar |
+
+**How to craft:** Place all three ingredients anywhere in the crafting grid. The recipe is shapeless. Collect 1 fermented spider eye from the output slot.
+
+**Uses:** A corrupting ingredient. Brewing it with certain potions twists their effect: Potion of Healing becomes Potion of Harming, Night Vision becomes Invisibility, and Swiftness becomes Slowness. Combined with an Awkward Potion, it brews Potion of Weakness — the missing ingredient for curing zombie villagers with a golden apple.
+
+**Progression tip:** Keep a small sugar cane farm near water; sugar cane regrows quickly and is needed for this recipe, paper, and cake. Fermented spider eyes are the least obvious ingredient to stockpile, so brew a few every time you kill spiders.
+
+### Awkward Potion
+
+**Category:** Brewing
+**Tier:** Mid-game
+
+**Recipe** (Brewing Stand)
+```
+[ ][N][ ]   ← ingredient slot
+[W][W][W]   ← 3 water bottles
+Fuel: B (Blaze Powder)
+```
+**Yield:** 3 Awkward Potions
+
+**Legend:** N = Nether Wart, W = Water Bottle, B = Blaze Powder
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Glass Bottle | 3 | Craft 3 glass in a V shape → 3 bottles; right-click a water source to fill them |
+| Nether Wart | 1 | Found on soul sand in Nether fortresses; farm it by planting on soul sand |
+| Blaze Powder | 1 | Fuel — one powder powers 20 brews |
+
+**How to craft:** Fill three glass bottles from any water source. Open the brewing stand and place the three water bottles in the bottom slots. Put nether wart in the top ingredient slot and blaze powder in the fuel slot. Wait about 20 seconds until the brewing bubbles stop; the water bottles convert into Awkward Potions.
+
+**Uses:** An Awkward Potion has no effect if you drink it. It is the mandatory base for nearly every potion in the game — healing, fire resistance, strength, swiftness, night vision, and dozens more. Nothing brews without it.
+
+**Progression tip:** Bring nether wart back from the fortress and plant it on soul sand at your base. It grows in any dimension, giving you an infinite supply of the game's most important potion base. Bring home at least 6 wart per trip.
+
+### Potion of Fire Resistance
+
+**Category:** Brewing
+**Tier:** Mid-game
+
+**Recipe** (Brewing Stand)
+```
+[ ][M][ ]   ← ingredient slot
+[P][P][P]   ← 3 awkward potions
+Fuel: B (Blaze Powder)
+```
+**Yield:** 3 Potions of Fire Resistance (3:00)
+
+**Legend:** M = Magma Cream, P = Awkward Potion, B = Blaze Powder
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Awkward Potion | 3 | Brewed from water bottles + nether wart (see above) |
+| Magma Cream | 1 | Crafted from blaze powder + slimeball, or dropped by magma cubes |
+| Blaze Powder | 1 | Fuel for the brewing stand |
+
+**How to craft:** Place three Awkward Potions in the brewing stand's bottom slots. Put magma cream in the top ingredient slot and blaze powder in the fuel slot. Brew until the bubbles stop; each bottle becomes a Potion of Fire Resistance lasting 3 minutes.
+
+**Uses:** Grants complete immunity to fire, lava, and blaze fireballs for three minutes. Walk through lava lakes, bridge across the Nether's oceans, and raid fortresses without fear. It is the single most useful potion in the Nether and a lifesaver when mining ancient debris, which sits right next to lava.
+
+**Progression tip:** Extend the duration to 8 minutes by adding redstone dust after brewing. For long Nether expeditions, brew a full batch of extended fire resistance and keep one in your hotbar at all times.
+
+### Potion of Healing
+
+**Category:** Brewing
+**Tier:** Mid-game
+
+**Recipe** (Brewing Stand)
+```
+[ ][G][ ]   ← ingredient slot
+[P][P][P]   ← 3 awkward potions
+Fuel: B (Blaze Powder)
+```
+**Yield:** 3 Potions of Healing
+
+**Legend:** G = Glistering Melon Slice, P = Awkward Potion, B = Blaze Powder
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Awkward Potion | 3 | Brewed from water bottles + nether wart |
+| Glistering Melon Slice | 1 | Crafted from 8 gold nuggets + 1 melon slice |
+| Blaze Powder | 1 | Fuel for the brewing stand |
+
+**How to craft:** Place three Awkward Potions in the bottom slots and a glistering melon slice in the top slot, with blaze powder as fuel. Brew to completion. You now have three Potions of Healing.
+
+**Uses:** Drinking it instantly restores 2 hearts with no delay — unlike food, it heals even during combat and works at any hunger level. This is the fastest way to recover mid-fight and pairs well with a shield when being swarmed.
+
+**Progression tip:** Upgrade to Healing II by adding glowstone dust to the brew — it restores 4 hearts per drink. For boss fights, splash versions are even better because they heal you without the drinking pause.
+
+### Splash Potion of Healing
+
+**Category:** Brewing
+**Tier:** End-game
+
+**Recipe** (Brewing Stand)
+```
+[ ][U][ ]   ← ingredient slot
+[P][P][P]   ← 3 healing potions
+Fuel: B (Blaze Powder)
+```
+**Yield:** 3 Splash Potions of Healing
+
+**Legend:** U = Gunpowder, P = Potion of Healing, B = Blaze Powder
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Potion of Healing | 3 | Brewed from awkward potion + glistering melon slice |
+| Gunpowder | 1 | Dropped by creepers, ghasts, and witches; found in dungeon and desert temple chests |
+| Blaze Powder | 1 | Fuel for the brewing stand |
+
+**How to craft:** Place three Potions of Healing in the brewing stand's bottom slots. Put gunpowder in the top slot with blaze powder as fuel. Brew until the stand stops bubbling. Each potion becomes a throwable splash version, and the stand emits a distinct brew sound on completion.
+
+**Uses:** Right-click to throw. The potion shatters on impact, healing any player in a small radius — including yourself — without drinking. It also damages undead mobs such as zombies and skeletons on contact, making it a useful offensive tool in a pinch. Thrown at your own feet, it gives the instant heal with no drinking animation.
+
+**Progression tip:** Stock up for the Ender Dragon fight — splash healing keeps your HP topped up while you are busy breaking end crystals. Adding dragon's breath to any splash potion converts it to a lingering potion, leaving a mist cloud that affects anyone who walks through it.
+
+***
+Next: the End awaits — shulker shells, elytra, and a crafting table in the sky.
+
+---
+
 ## APPENDIX — CRAFTING SHAPE PATTERNS
 
 | Item | Pattern (top row → middle → bottom) | Materials |
