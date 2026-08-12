@@ -1,6 +1,6 @@
 name: Daily Crafting Writing
 
-# Writes the next ~2,000-word chapter of the Minecraft Crafting Reference
+# Writes the next ~2,000-word chapter (daily) of the Minecraft Crafting Reference
 # every day using the big-pickle model on opencode.ai. Each chapter covers
 # new items with exact recipes — progressively more advanced content, no
 # repeats (tracked in covered.json). Runs from GitHub runners (fresh IPs)
