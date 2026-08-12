@@ -35,7 +35,7 @@ const MAX_WORDS = cfg.maxWords || 2600;
 const MIN_ITEMS = cfg.minItems || 4;
 const API_TIMEOUT_MS = cfg.apiTimeoutMs || 600000;
 const MAX_TOKENS = cfg.maxTokens || 24000;
-const MAX_TRIES = 4;
+const MAX_TRIES = 6;
 
 const BASE_URL = process.env.OPENCODE_BASE_URL || "https://opencode.ai/zen/v1";
 const MODEL = process.env.MODEL || "big-pickle";
@@ -221,11 +221,11 @@ async function main() {
     `4. A closing line: "***" then a one-line hook for the next chapter (e.g. "Next: the Nether awaits.").\n\n` +
     `START YOUR REPLY DIRECTLY WITH: "## CHAPTER ${chapterN} — <TITLE>". Nothing before it.\n` +
     `ALREADY-DOCUMENTED ITEMS (never use these): ${coveredList || "(none)"}.\n` +
-    `FRESH AREAS to draw from (pick items NOT yet documented): brewing and potions, dyes and ` +
-    `colored blocks, minecarts and rails, redstone components (repeater/comparator/observer/` +
-    `dropper), netherite smithing upgrades, banners and shields, paintings and item frames, ` +
-    `boats, scaffolding, lodestone, respawn anchor, conduit, end crystals, elytra, shulker ` +
-    `boxes, beacons accessories, lighting, storage variants, decor blocks, tools variants.\n` +
+    `Pick items from anywhere NOT in that list — e.g. brewing ingredients and potion recipes, ` +
+    `dyes, rails, redstone parts, smithing upgrades, shields, boats, scaffolding, lodestone, ` +
+    `respawn anchor, conduit, elytra, shulker boxes, lighting, storage and decor variants. ` +
+    `If an item's craftable machine/block is documented (like the brewing stand), you may still ` +
+    `document its RECIPES and INGREDIENTS under a different item name.\n` +
     `STRICT LENGTH: the chapter MUST be 1700-2300 words. If it is longer than 2500 words it will be rejected. Do not pad, do not repeat.\n` +
     `DO NOT cover any of these already-documented items (each is already in the book): ${coveredList || "(none)"}.\n` +
     `Every item in this chapter must be NEW to the book. All quantities and recipes must be ` +
@@ -237,14 +237,15 @@ async function main() {
 
   // Generate — rotate through fallback keys, back off harder each try
   let content = null, title = null, newItems = [];
+  const rejectionNotes = [];
   for (let i = 1; i <= MAX_TRIES; i++) {
     const keyIdx = i - 1;
     try {
-      const raw = await generateChapter(prompt, keyIdx);
+      const raw = await generateChapter(prompt + rejectionNotes.join(""), keyIdx);
       const wc = wordCount(raw.replace(/^#{1,6}\s.*$/gm, ""));
       log(`attempt ${i} (key ${keyIdx + 1}/${KEYS.length}): generated ${wc} words`);
-      if (wc < MIN_WORDS) throw new Error(`too short (${wc} words)`);
-      if (wc > MAX_WORDS) throw new Error(`too long (${wc} words)`);
+      if (wc < MIN_WORDS) { rejectionNotes.push(`\n\nPREVIOUS ATTEMPT WAS REJECTED: only ${wc} words. Write at least ${MIN_WORDS} words this time.`); throw new Error(`too short (${wc} words)`); }
+      if (wc > MAX_WORDS) { rejectionNotes.push(`\n\nPREVIOUS ATTEMPT WAS REJECTED: too long (${wc} words). Keep it under ${MAX_WORDS} words.`); throw new Error(`too long (${wc} words)`); }
 
       // Extract the item headings from the raw content
       const items = extractItemNames(raw);
@@ -252,7 +253,10 @@ async function main() {
 
       // No repeats allowed
       const dupes = items.filter((it) => coveredSet.has(it.toLowerCase()));
-      if (dupes.length) throw new Error(`repeats covered items: ${dupes.join(", ")}`);
+      if (dupes.length) {
+        rejectionNotes.push(`\n\nPREVIOUS ATTEMPT WAS REJECTED: it used already-documented items (${dupes.join(", ")}). Absolutely do NOT use those item names again in any form.`);
+        throw new Error(`repeats covered items: ${dupes.join(", ")}`);
+      }
 
       // Recipe grids must be present
       const grids = (raw.match(/```/g) || []).length;
