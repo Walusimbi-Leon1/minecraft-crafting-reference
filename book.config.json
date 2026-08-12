@@ -1,0 +1,17 @@
+{
+  "title": "Minecraft Crafting Reference",
+  "subtitle": "How Everything in Minecraft Is Made",
+  "genre": "Minecraft crafting reference / recipe manual",
+  "author": "Walusimbi Leon (SGSS)",
+  "description": "A complete, ever-growing reference for how everything in Minecraft is crafted. Every entry covers the recipe (crafting grid, furnace, brewing stand, or smithing table), the exact materials, where to obtain them, what the item does, and how it fits into progression. The reference grows daily: a new chapter of recipes lands every day.",
+  "style": "Precise, practical, reference-manual voice. Every item gets: an exact 3×3 crafting-grid diagram in ASCII code blocks, a materials table with quantities, a written step-by-step recipe, uses, and a progression tip. Clear headings, no fluff. Second person when giving instructions ('place 3 planks across the top row').",
+  "characters": "The player (the crafter). Blocks and items: logs, planks, sticks, cobblestone, iron, gold, diamond, netherite, redstone, copper, quartz, emeralds, lapis, amethyst, wool, leather, paper, sugar cane, blaze rods, ender pearls, gunpowder, etc.",
+  "setting": "Minecraft Java Edition (latest versions — assume 1.20+ / 1.21 mechanics: trial chambers, crafter block, copper, tuff, etc.). All crafting happens on a crafting table unless noted. Furnace recipes, brewing stand recipes, smithing table recipes, and the stonecutter are all in scope.",
+  "notes": "The book opens with fundamentals (how to craft your first tools, the crafting table itself) and advances chapter by chapter: Wooden Age → Stone Age → Iron Age → Gold & Lapis → Redstone basics → Diamond → Nether portal & Nether materials → Enchanting & brewing → Redstone advanced (pistons, observers, repeaters, comparators) → Copper & the Crafter → Tuff & trial chambers → Deep Dark & echo shards → Netherite & smithing → Beacons, conduits & end-game blocks → Every remaining block, item, and food. Never repeat an item already covered (tracked in covered.json).",
+  "bookFile": "book/part1.md",
+  "buildSite": "python3 build_site.py",
+  "targetWords": 2000,
+  "minWords": 1500,
+  "apiTimeoutMs": 600000,
+  "maxTokens": 24000
+}

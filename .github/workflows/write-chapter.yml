@@ -1,0 +1,52 @@
+name: Daily Crafting Writing
+
+# Writes the next ~2,000-word chapter of the Minecraft Crafting Reference
+# every day using the big-pickle model on opencode.ai. Each chapter covers
+# new items with exact recipes — progressively more advanced content, no
+# repeats (tracked in covered.json). Runs from GitHub runners (fresh IPs)
+# so opencode.ai never rate-limits us. Pushing to main auto-deploys
+# GitHub Pages.
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-crafting-writing
+  cancel-in-progress: false
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install markdown
+        run: pip install markdown
+
+      - name: Write next chapter
+        run: node scripts/write-chapter.js
+        env:
+          OPENCODE_API_KEY: *** secrets.OPENCODE_API_KEY }}
+          OPENCODE_API_KEY_2: ${{ secrets.OPENCODE_API_KEY_2 }}
+          OPENCODE_API_KEY_3: ${{ secrets.OPENCODE_API_KEY_3 }}
+          OPENCODE_API_KEY_4: ${{ secrets.OPENCODE_API_KEY_4 }}
+          OPENCODE_API_KEY_5: ${{ secrets.OPENCODE_API_KEY_5 }}
+          GH_PUSH_TOKEN: *** secrets.GH_PUSH_TOKEN }}
+          MODEL: big-pickle
