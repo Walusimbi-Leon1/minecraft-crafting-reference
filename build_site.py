@@ -67,7 +67,16 @@ for num, title in nav_items:
     )
 if nav_items:
     nav_links.append('<hr style="border-color:var(--line);margin:10px 0;">')
-nav_links.append('<a href="#appendix-whats-inside">Appendix — Index</a>')
+# Appendix anchor — derive from the actual appendix heading in the book
+app_m = re.search(r"^## (.+)$", md_text, re.M)
+appendix_anchor = None
+for line in md_text.splitlines():
+    m = re.match(r"^## (APPENDIX.*)$", line)
+    if m:
+        appendix_anchor = f"#{slugify(m.group(1))}"
+        break
+if appendix_anchor:
+    nav_links.append(f'<a href="{appendix_anchor}">Appendix — Index</a>')
 nav_html = "\n".join(nav_links)
 
 html = f"""<!DOCTYPE html>
