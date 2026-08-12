@@ -92,11 +92,15 @@ async function generateChapter(prompt, keyIndex) {
   const API_KEY = KEYS[keyIndex % KEYS.length];
   const sys =
     `You are the crafting chronicler for "${TITLE}" by ${cfg.author || "Walusimbi Leon (SGSS)"}.\n` +
-    `You write precise, playable Minecraft crafting reference entries in the book's house style: ` +
-    `exact ASCII crafting grids, exact material quantities, and zero fluff.\n` +
+    `You write precise, playable Minecraft crafting reference entries: exact ASCII crafting ` +
+    `grids, exact material quantities, zero fluff.\n` +
     `HARD RULE: do NOT think at length. Do not analyze, do not plan, do not list constraints. ` +
     `Write the answer IMMEDIATELY — your very first output token must be the chapter heading. ` +
     `If you spend tokens on reasoning instead of content, you fail.\n` +
+    `THE BOOK ALREADY COVERS these chapters: tools, arrow crafting, armor, navigation/utility, ` +
+    `machines & redstone contraptions, transportation, enchanting & upgrades, food, storage, ` +
+    `smelting, advanced machines, nether portal, block compression, decorative blocks. ` +
+    `Your chapter MUST use only items NOT already covered.\n` +
     `Write ONLY the chapter content described in the user prompt — no commentary, no recaps, ` +
     `no meta-notes, no "here is" introductions.`;
 
@@ -179,7 +183,7 @@ async function main() {
   // Continuity: tail of the book (last chapter) for style + topic flow
   const appIdx = md.search(/^##\s+APPENDIX\b/m);
   const bodyEnd = appIdx >= 0 ? md.slice(0, appIdx).trim() : md.trim();
-  const lastWords = bodyEnd.split(/\s+/).slice(-1200).join(" ");
+  const lastWords = bodyEnd.split(/\s+/).slice(-600).join(" ");
 
   // Items covered so far (manifest + parsed from the book) — no repeats allowed
   const coveredSet = new Set([...covered, ...extractItemNames(md)].map((s) => s.toLowerCase()));
@@ -216,6 +220,12 @@ async function main() {
     `clearly (e.g. "Furnace: 1 iron ore + 1 coal → 1 iron ingot").\n` +
     `4. A closing line: "***" then a one-line hook for the next chapter (e.g. "Next: the Nether awaits.").\n\n` +
     `START YOUR REPLY DIRECTLY WITH: "## CHAPTER ${chapterN} — <TITLE>". Nothing before it.\n` +
+    `ALREADY-DOCUMENTED ITEMS (never use these): ${coveredList || "(none)"}.\n` +
+    `FRESH AREAS to draw from (pick items NOT yet documented): brewing and potions, dyes and ` +
+    `colored blocks, minecarts and rails, redstone components (repeater/comparator/observer/` +
+    `dropper), netherite smithing upgrades, banners and shields, paintings and item frames, ` +
+    `boats, scaffolding, lodestone, respawn anchor, conduit, end crystals, elytra, shulker ` +
+    `boxes, beacons accessories, lighting, storage variants, decor blocks, tools variants.\n` +
     `STRICT LENGTH: the chapter MUST be 1700-2300 words. If it is longer than 2500 words it will be rejected. Do not pad, do not repeat.\n` +
     `DO NOT cover any of these already-documented items (each is already in the book): ${coveredList || "(none)"}.\n` +
     `Every item in this chapter must be NEW to the book. All quantities and recipes must be ` +
