@@ -1237,6 +1237,217 @@ Next: the End awaits — shulker shells, elytra, and a crafting table in the sky
 
 ---
 
+## CHAPTER 16 — THE END AWAITS
+
+The Nether is behind you; the End is the last threshold. This chapter covers every crafting chain the dimension unlocks: locating the stronghold with eyes of ender, brewing the right preparations before the fight, harvesting chorus fruit into building materials on the outer islands, and carrying your entire base with you in shulker boxes.
+
+### Eye of Ender
+**Category:** Materials **Tier:** Mid-game
+
+**Recipe**
+```
+[ ][E][ ]
+[ ][B][ ]
+[ ][ ][ ]
+```
+
+**Legend:** E = Ender Pearl, B = Blaze Powder
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Ender Pearl | 1 | Dropped by endermen in any dimension (Looting increases the drop rate) |
+| Blaze Powder | 1 | Crafted from 1 blaze rod, dropped by blazes in nether fortresses |
+
+**How to craft:** Place the ender pearl in the center cell of the crafting grid and the blaze powder in the cell directly beneath it. The positions can be shifted left or right as a pair, but the pearl must sit directly above the powder. The two fuse into a single eye of ender.
+
+**Uses:** Throw one and it floats upward roughly 12 blocks, picks a direction, and flies toward the nearest end portal stronghold, leaving a trail of purple particles. Each throw has a 20% chance to shatter the eye, so you need spares to finish the journey. Twelve eyes activate the portal frame, and one is also an ingredient in every end crystal.
+
+**Progression tip:** Gather 14–16 ender pearls before your fortress raid so one batch of blaze rods covers the portal, replacement eyes, and end crystals later. Throw the eyes only from the surface so they can travel at full height before diving underground.
+
+### Potion of Slow Falling
+**Category:** Brewing **Tier:** Mid-game
+
+**Recipe** (Brewing Stand)
+```
+[ ][M][ ]  ← ingredient slot
+[P][P][P]  ← 3 awkward potions
+Fuel: B (Blaze Powder)
+```
+
+**Yield:** 3 Potions of Slow Falling
+
+**Legend:** M = Phantom Membrane, P = Awkward Potion, B = Blaze Powder
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Awkward Potion | 3 | Brewed from 1 nether wart + 3 water bottles |
+| Phantom Membrane | 1 | Dropped by phantoms, which spawn after 3 or more sleepless nights |
+| Blaze Powder | 1 | Brewing stand fuel |
+
+**How to craft:** Set up the brewing stand with blaze powder in the fuel slot and three awkward potions in the bottom slots. Drop a phantom membrane into the top ingredient slot and brew until the bubbles stop. Every awkward potion becomes a Potion of Slow Falling.
+
+**Uses:** For 90 seconds you fall slowly, take no fall damage at all, and can steer your descent slightly with the movement keys. It makes the dragon's wing-buffet knockback completely harmless and turns End island-hopping into a controlled glide rather than a leap of faith.
+
+**Progression tip:** Brew redstone dust into the batch afterward to extend the effect to 4 minutes. Drink one the moment you step through the End portal — it lasts through the approach and the dragon's first attack cycles, and it pairs perfectly with an elytra for safe dive-and-flare flying later.
+
+### End Crystal
+**Category:** Blocks **Tier:** End-game
+
+**Recipe**
+```
+[G][T][G]
+[G][  ][G]
+[G][E][G]
+```
+
+**Legend:** G = Glass, T = Ghast Tear, E = Eye of Ender
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Glass | 7 | Smelt 7 sand in a furnace |
+| Ghast Tear | 1 | Dropped by ghasts in the Nether |
+| Eye of Ender | 1 | Crafted from ender pearl + blaze powder (this chapter) |
+
+**How to craft:** Ring the outer edge of the grid with seven glass blocks, leave the center empty, place the ghast tear in the top-center cell, and set the eye of ender in the bottom-center cell. The glass encases the ingredients into a floating, glowing crystal.
+
+**Uses:** Placing four end crystals on the bedrock blocks around the end portal heals the dragon and respawns it for another fight. These crystals also emit a bright glow and make dramatic, high-risk decorative lamps in bases — the same ones the dragon uses in battle.
+
+**Progression tip:** End crystals explode violently when broken, so destroy them only with a bow from a safe distance. Craft a set of four before you want a rematch with the dragon, and treat them like TNT in your storage room.
+
+### Popped Chorus Fruit
+**Category:** Materials **Tier:** End-game
+
+**Recipe** (Furnace)
+```
+Furnace: 1 chorus fruit + 1 fuel (coal, charcoal, or any burnable) → 1 popped chorus fruit
+```
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Chorus Fruit | 1 | Harvested by breaking chorus plants on the End's outer islands |
+| Fuel | 1 | Coal, charcoal, planks, or any smelting fuel |
+
+**How to craft:** Put the chorus fruit in the furnace's top slot and fuel in the bottom slot. When the smelting arrow fills, the fruit pops into a pale, dry, ridged item that can no longer be eaten.
+
+**Uses:** Popped chorus fruit is purely an ingredient — it is the base of every purpur block, purpur pillar, and end rod. Raw chorus fruit, by contrast, restores hunger but teleports the eater randomly, which makes it a fun but dangerous snack.
+
+**Progression tip:** Smelt 64–128 popped chorus fruit before building anything on the outer islands. Purpur blocks eat four pieces each and end rods consume one apiece, so the popped fruit is the real currency of End architecture.
+
+### Purpur Block
+**Category:** Decoration **Tier:** End-game
+
+**Recipe**
+```
+[P][P][ ]
+[P][P][ ]
+[ ][ ][ ]
+```
+
+**Legend:** P = Popped Chorus Fruit
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Popped Chorus Fruit | 4 | Smelted from chorus fruit (see above) |
+
+**How to craft:** Fill a 2×2 square in the crafting grid with four popped chorus fruits. Each craft yields one purpur block, so gather plenty of fruit before your building session.
+
+**Uses:** A dense, pale-purple block with a chiseled texture — the End's native building material and the natural companion to the Nether's bricks and the Overworld's stone. Run it through the stonecutter to produce purpur stairs, slabs, and pillars, all sharing the same palette.
+
+**Progression tip:** Chorus plants regrow when you break their top flower, so a small chorus farm on an End island keeps you supplied forever. Pair purpur with end rods for lighting and with shulker boxes for storage alcoves.
+
+### End Rod
+**Category:** Decoration **Tier:** End-game
+
+**Recipe**
+```
+[ ][B][ ]
+[ ][P][ ]
+[ ][ ][ ]
+```
+
+**Legend:** B = Blaze Rod, P = Popped Chorus Fruit
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Blaze Rod | 1 | Dropped by blazes in nether fortresses |
+| Popped Chorus Fruit | 1 | Smelted from chorus fruit |
+
+**How to craft:** Place the blaze rod in the center cell and the popped chorus fruit directly beneath it. One craft yields four end rods, so a single blaze rod converts into four slim light fixtures.
+
+**Uses:** End rods emit bright white light (light level 14) from a thin, elegant column with a small glowing tip. They attach to any face of a block — floor, wall, or ceiling — making them ideal for flush lighting, wall sconces, and accent lines in End architecture.
+
+**Progression tip:** They never flicker like torches and don't trigger sculk sensors, which makes them the cleanest light source in the game. Grab a few extra blaze rods on your next fortress visit — four rods become sixteen end rods.
+
+### Shulker Box
+**Category:** Storage **Tier:** End-game
+
+**Recipe**
+```
+[ ][S][ ]
+[ ][C][ ]
+[ ][S][ ]
+```
+
+**Legend:** S = Shulker Shell, C = Chest
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Shulker Shell | 2 | Dropped by shulkers in End cities (about 50% chance per kill) |
+| Chest | 1 | Crafted from 8 planks of any wood |
+
+**How to craft:** Place a shulker shell in the top-center cell, a chest in the center cell, and a second shulker shell in the bottom-center cell. The shells snap onto the chest to form a single shulker box.
+
+**Uses:** This 27-slot box keeps its contents when mined and picked up, so you can carry it in your inventory like a backpack — place it, open it, break it, and its items are still inside. Combine one with 1 dye of any color to tint the shell for instant visual sorting.
+
+**Progression tip:** Loot every End city you can find; each shulker kill is a chance at another portable cabinet. Dye a set of boxes by category — one color for building blocks, one for food, one for potions — and you can restock an entire expedition in seconds.
+
+### Lingering Potion
+**Category:** Brewing **Tier:** End-game
+
+**Recipe** (Brewing Stand)
+```
+[ ][D][ ]  ← ingredient slot
+[S][S][S]  ← 3 splash potions (same type)
+Fuel: B (Blaze Powder)
+```
+
+**Yield:** 3 Lingering Potions
+
+**Legend:** D = Dragon's Breath, S = Any Splash Potion, B = Blaze Powder
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Splash Potion (any type) | 3 | Brewed potion + gunpowder |
+| Dragon's Breath | 1 | Collected by holding an empty glass bottle inside the dragon's breath attack cloud |
+| Blaze Powder | 1 | Brewing stand fuel |
+
+**How to craft:** Put three identical splash potions in the brewing stand's bottom slots, add dragon's breath to the top ingredient slot, and brew with blaze powder. The stand converts all three into lingering versions that leave clouds when thrown.
+
+**Uses:** A thrown lingering potion leaves a swirling, colored cloud that applies its effect to anyone who steps into it — including you, so mind your footing. In a crafting table, combine the lingering potion with 8 arrows to forge 8 tipped arrows that carry the same effect on hit.
+
+**Progression tip:** Dragon's breath is limited per fight, so carry a stack of empty glass bottles into the boss battle and collect it whenever the dragon breathes. Lingering potions of healing make the Wither fight dramatically safer, and tipped arrows of slowness or poison turn a plain bow into a status weapon.
+
+***
+Next: the deep dark, the trial chambers, and the Crafter's workshop.
+
+---
+
 ## APPENDIX — CRAFTING SHAPE PATTERNS
 
 | Item | Pattern (top row → middle → bottom) | Materials |
