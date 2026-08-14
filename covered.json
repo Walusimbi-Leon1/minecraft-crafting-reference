@@ -18,10 +18,13 @@
   "cake",
   "chest",
   "chestplate",
+  "Chiseled Tuff",
   "clock",
   "compass",
   "cookies",
   "copper block",
+  "Copper Bulb",
+  "Crafter",
   "crafting table",
   "detector rail",
   "diamond block",
@@ -52,6 +55,7 @@
   "ladder",
   "leggings",
   "Lingering Potion",
+  "Mace",
   "Magma Cream",
   "map (empty)",
   "minecart",
@@ -67,6 +71,7 @@
   "pumpkin pie",
   "Purpur Block",
   "rail",
+  "Recovery Compass",
   "redstone block",
   "redstone comparator",
   "redstone repeater",
@@ -83,5 +88,7 @@
   "sword",
   "tnt",
   "trapdoor",
-  "trapped chest"
+  "trapped chest",
+  "Tuff Bricks",
+  "Wind Charge"
 ]

@@ -1448,6 +1448,208 @@ Next: the deep dark, the trial chambers, and the Crafter's workshop.
 
 ---
 
+## CHAPTER 17 — THE CRAFTER'S WORKSHOP
+
+Chapter 16 ended beneath the End city towers, with shulker boxes and end rods in hand. With full inventory capacity and end-game travel behind you, this chapter turns back to the overworld's newest frontiers: the deep dark's ancient cities and the trial chambers hidden under the mountains. Those two dungeons supply the echo shards, breeze rods, heavy cores, and carved tuff you need to build a fully automated workshop. By the end, your base gains a crafter that assembles items without you, a switchable copper lamp, and a mace that strikes harder the higher you fall.
+
+### Crafter
+
+**Category:** Redstone
+**Tier:** Mid-game
+
+**Recipe**
+
+```
+[I][I][I]
+[I][C][I]
+[R][R][R]
+```
+
+**Legend:** I = Iron Ingot, C = Crafting Table, R = Redstone Dust
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Iron Ingot | 5 | Smelt iron ore; also looted from trial chamber chests |
+| Crafting Table | 1 | Crafted from 4 planks of any wood |
+| Redstone Dust | 3 | Mine redstone ore with an iron pickaxe or better |
+
+**How to craft:** Lay three iron ingots across the top row. Place a crafting table in the center cell of the middle row, with one iron ingot on each side of it. Finish by placing three redstone dust across the bottom row. The machine snaps together around the crafting table.
+
+**Uses:** The crafter is the first block that can run any crafting recipe without a player. It has a 3×3 internal grid with the same layout rules as a crafting table, and each of its nine slots can be toggled on or off by clicking it — disable every slot you are not using so the pattern stays locked. Feed ingredients in through hoppers on any face, then send a redstone pulse, and the crafter consumes exactly the items in its enabled slots, assembles the recipe, and ejects the finished product from its front face. Park a hopper at the front to collect the output. A redstone comparator placed against the crafter reads how full its slots are, so you can build timing circuits that only pulse when ingredients are present.
+
+**Progression tip:** The crafter is the heart of an automated workshop. Wire it to a simple redstone clock (a hopper clock or observer loop) and it produces items on its own, indefinitely. Chain several crafters together — one makes planks, the next turns planks into sticks, the next turns sticks and iron into rails — and a line of hoppers will carry the goods down the line.
+
+### Copper Bulb
+
+**Category:** Blocks
+**Tier:** Mid-game
+
+**Recipe** (yields 4)
+
+```
+[ ][C][ ]
+[C][B][C]
+[ ][R][ ]
+```
+
+**Legend:** C = Copper Ingot, B = Blaze Rod, R = Redstone Dust
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Copper Ingot | 3 | Smelt raw copper mined from copper ore |
+| Blaze Rod | 1 | Dropped by blazes in nether fortresses |
+| Redstone Dust | 1 | Mine redstone ore |
+
+**How to craft:** Place a copper ingot in the top-center cell, put the blaze rod in the exact center, and set one copper ingot to the rod's left and right. Drop the redstone dust directly beneath the blaze rod. One craft yields four bulbs.
+
+**Uses:** Copper bulbs are toggleable lamps. A redstone pulse flips a bulb from unlit to lit or back, and it holds that state even after the signal ends. A fresh, unwaxed bulb shines at light level 15, but as the copper oxidizes the light drops through exposed (12), weathered (8), and oxidized (4). Right-click a bulb with honeycomb to wax it, freezing both its texture and its brightness forever.
+
+**Progression tip:** Because one pulse turns a bulb on and the next turns it off, a button wired straight into a bulb gives you a temporary light, and a lever gives a permanent one. Waxed copper bulbs never dim, which makes them the cleanest long-term lighting in the game — no torches, no flicker, no sculk sensor interference.
+
+### Wind Charge
+
+**Category:** Weapons
+**Tier:** Mid-game
+
+**Recipe** (yields 4)
+
+```
+[ ][ ][ ]
+[ ][B][ ]
+[ ][ ][ ]
+```
+
+**Legend:** B = Breeze Rod
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Breeze Rod | 1 | Dropped by the breeze mob inside trial chambers |
+
+**How to craft:** Place a single breeze rod in the center cell of the crafting grid. The rod shatters into four compact, light-colored charges.
+
+**Uses:** Throw a wind charge like a snowball — no bow required. On impact it bursts into a wind gust that shoves players, mobs, and dropped items away from the impact point, dealing no direct damage. The gust also extinguishes candles and campfires, so one well-aimed charge can douse a row of flames from across the room. Dispensers can fire wind charges too, turning the block into a knockback turret with effectively unlimited ammunition.
+
+**Progression tip:** Toss a charge at your feet to launch yourself up onto ledges or out of a cornered fight — the push does not hurt you. Wind charges are also the perfect partner for the mace below: throw one mid-fall to break your momentum and start a second smash.
+
+### Mace
+
+**Category:** Weapons
+**Tier:** End-game
+
+**Recipe** (Smithing Table)
+
+```
+[HC] + [BR]  →  [M]
+```
+
+**Legend:** HC = Heavy Core, BR = Breeze Rod, M = Mace
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Heavy Core | 1 | Looted from vaults inside trial chambers |
+| Breeze Rod | 1 | Dropped by the breeze mob inside trial chambers |
+
+**How to craft:** Open a smithing table and place the heavy core in the left input slot and the breeze rod in the right input slot. No smithing template is required and none is consumed — the mace appears in the output slot, ready to pick up.
+
+**Uses:** The mace is the trial chambers' signature weapon and the only melee weapon in the game that rewards height. It deals solid base damage, and its smash attack triggers when you fall more than a block and a half before striking: every extra block of fall piles on bonus damage, so a short drop already outclasses a sword, and a tall drop can end a fight in one swing. The mace is slower than a sword, so time your strikes instead of spam-clicking. It accepts the exclusive enchantments density (extra damage per block fallen), breach (ignores armor), and wind burst (launches you upward on a smash, letting you chain a second hit), plus mending and unbreaking — those enchanted books are found in trial chamber chests.
+
+**Progression tip:** The first heavy core you pull from a trial chamber vault should become a mace immediately, and the breeze rod you need is usually looted from the breeze in the same building. Keep wind charges in your offhand: throw one mid-fall to reset your height, then smash down again — the wind-burst loop makes the mace a true end-game weapon.
+
+### Recovery Compass
+
+**Category:** Tools
+**Tier:** Mid-game
+
+**Recipe**
+
+```
+[E][E][E]
+[E][C][E]
+[E][E][E]
+```
+
+**Legend:** E = Echo Shard, C = Compass
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Echo Shard | 8 | Found in chests inside ancient cities in the deep dark |
+| Compass | 1 | Crafted from 4 iron ingots and 1 redstone dust |
+
+**How to craft:** Ring a normal compass with eight echo shards, filling every cell except the center. The shards fold around the compass needle and re-align it to a new, personal target.
+
+**Uses:** The recovery compass ignores north. Its needle always points toward the coordinates of your most recent death, leading you straight back to your dropped items. In the Nether and the End, where an ordinary compass needle simply spins, the recovery compass still locks onto your death site in that dimension.
+
+**Progression tip:** The deep dark is the most punishing biome in the game — one warden encounter can erase hours of progress. Craft this before you loot a second ancient city: if a sculk shrieker summons the warden and you fall, the recovery compass turns the trip back into a straight line instead of a frantic search. Echo shards have no crafting recipe, so collect every one you find in ancient city chests.
+
+### Chiseled Tuff
+
+**Category:** Decoration
+**Tier:** Mid-game
+
+**Recipe**
+
+```
+[ ][P][ ]
+[ ][P][ ]
+[ ][ ][ ]
+```
+
+**Legend:** P = Polished Tuff Slab
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Polished Tuff Slab | 2 | Craft 4 tuff into 4 polished tuff, then craft 3 polished tuff into 6 slabs — or cut slabs directly in a stonecutter |
+
+**How to craft:** Stand two polished tuff slabs on top of each other in the center column — one in the top-center cell, one in the center cell. They press together into a single carved block. A stonecutter can also cut one chiseled tuff straight from a single block of tuff or polished tuff.
+
+**Uses:** Chiseled tuff is the decorative face of the trial chambers: a pale, gray block with a carved, symmetrical pattern across its surface. It is non-flammable and durable, and it mixes cleanly with polished tuff, tuff bricks, stairs, slabs, and walls to build in the update's signature palette.
+
+**Progression tip:** Tuff is mined in enormous quantities while clearing trial chambers, so treat it as free building material rather than trash. Run it all through the stonecutter, which converts tuff into polished tuff, bricks, stairs, slabs, walls, and chiseled variants at one block per output, with zero waste.
+
+### Tuff Bricks
+
+**Category:** Decoration
+**Tier:** Mid-game
+
+**Recipe** (yields 4)
+
+```
+[P][P]
+[P][P]
+```
+
+**Legend:** P = Polished Tuff
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Polished Tuff | 4 | Crafted from 4 tuff in a 2×2 grid; tuff is mined from the overworld or looted in trial chambers |
+
+**How to craft:** Fill a 2×2 square with four blocks of polished tuff. The polished surfaces fuse into four brick-textured blocks. A stonecutter can also cut tuff bricks directly from tuff or polished tuff.
+
+**Uses:** Tuff bricks give trial chamber architecture a finer, stone-like texture while staying within the same gray family. They are non-flammable decorative blocks and form the middle tier of the tuff block family, sitting between smooth polished tuff and ornate chiseled tuff in visual weight. Use them for walls, pillars, and floors when you want more detail than plain polished tuff provides.
+
+**Progression tip:** Since the tuff family shares one material source, gather a full shulker box of tuff from your trial chamber runs and cut exactly the variants you need at a stonecutter. Tuff bricks also have their own stairs, slabs, and walls, so a single material can texture an entire build.
+
+***
+
+Next: the ancient cities below, sculk sensors, and the warden's hunting grounds.
+
+---
+
 ## APPENDIX — CRAFTING SHAPE PATTERNS
 
 | Item | Pattern (top row → middle → bottom) | Materials |
