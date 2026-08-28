@@ -3,6 +3,7 @@
   "arrow (4)",
   "Awkward Potion",
   "axe",
+  "Banner",
   "beacon",
   "bed",
   "blast furnace",
@@ -21,6 +22,7 @@
   "Chiseled Tuff",
   "clock",
   "compass",
+  "Concrete Powder",
   "Conduit",
   "cookies",
   "copper block",
@@ -33,6 +35,8 @@
   "door (wooden or iron)",
   "dried kelp block",
   "dropper",
+  "Dye (Primary Colors)",
+  "Dye (Secondary Colors)",
   "Elytra",
   "enchanting table",
   "End Crystal",
@@ -47,6 +51,7 @@
   "flint and steel",
   "furnace",
   "Glistering Melon Slice",
+  "Glowstone",
   "gold block",
   "golden apple",
   "golden carrot",
@@ -90,6 +95,7 @@
   "slab (x6)",
   "smoker",
   "Splash Potion of Healing",
+  "Stained Glass",
   "stairs",
   "sticky piston",
   "stonecutter",
@@ -98,5 +104,6 @@
   "trapdoor",
   "trapped chest",
   "Tuff Bricks",
-  "Wind Charge"
+  "Wind Charge",
+  "Wool (All Colors)"
 ]

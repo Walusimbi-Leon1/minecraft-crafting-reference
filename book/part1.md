@@ -1879,6 +1879,227 @@ Next: enchantments, the anvil, and the grindstone — where the deep dark's trea
 
 ---
 
+## CHAPTER 19 — THE DYE MASTER’S PALETTE
+
+This chapter moves beyond the functional blocks of the End to the vibrant world of color. Dyes are among the most versatile items in Minecraft, serving as the foundation for wool, concrete, glass, banners, and countless decorative combinations. While you may have stumbled upon a few flowers while exploring, mastering the full dye spectrum turns a base into a home. This chapter documents the full set of primary, secondary, and hybrid dye recipes, plus the key blocks that bring color to your builds.
+
+### Dye (Primary Colors)
+
+**Category:** Materials
+**Tier:** Early-game
+
+**Recipe** (yields 1 dye)
+
+```
+[ ][ ][ ]
+[ ][I][ ]
+[ ][ ][ ]
+```
+
+**Legend:** I = Ingredient (varies by color)
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Ingredient (varies) | 1 | See below |
+
+**How to craft:** Place a single ingredient in the center cell of the crafting grid. The ingredient converts directly into its corresponding dye. The primary dye ingredients and their outputs are:
+
+- **Bone Meal** (from 1 bone, dropped by skeletons) → White Dye
+- **Ink Sac** (from squid, found in oceans and rivers) → Black Dye
+- **Lapis Lazuli** (mined from lapis ore, found deep underground) → Blue Dye
+- **Cactus** (mined from desert biomes) → Green Dye (smelt 1 cactus in a furnace with any fuel)
+- **Cocoa Beans** (harvested from jungle trees) → Brown Dye
+- **Red Tulip, Poppy, Rose Bush** (found in plains and forests) → Red Dye
+- **Dandelion, Sunflower** (found in plains and sunflower plains) → Yellow Dye
+- **Allium, Cornflower** (found in flower forests) → Magenta Dye / Blue Dye respectively
+
+**Uses:** Primary dyes are the base of the entire color system. Combine them in pairs to make secondary dyes, or use them directly on wool, concrete powder, glass, and leather armor. They also craft into banners, fireworks, and stained clay.
+
+**Progression tip:** Set up a small flower farm early — collect two of each flower type you find and replant them using bone meal to multiply them. Bonemealing a flower spawns more of the same flower, turning a single dandelion into an infinite yellow dye source. Cactus farms are the fastest path to green dye, and squid ink is renewable from any ocean.
+
+### Dye (Secondary Colors)
+
+**Category:** Materials
+**Tier:** Early-game
+
+**Recipe** (yields 2 dyes)
+
+```
+[ ][ ][ ]
+[A][B][ ]
+[ ][ ][ ]
+```
+
+**Legend:** A = Primary dye #1, B = Primary dye #2
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Primary dye #1 | 1 | See primary dye recipes above |
+| Primary dye #2 | 1 | See primary dye recipes above |
+
+**How to craft:** Place one primary dye in the left-center cell and a second primary dye in the center cell. The two combine into two units of the secondary dye. The secondary dye combinations are:
+
+- **Lime Dye** = Green Dye + White Dye (or smelt a sea pickle in a furnace)
+- **Cyan Dye** = Blue Dye + Green Dye (or craft from 1 lapis lazuli + 1 cactus green)
+- **Light Blue Dye** = Blue Dye + White Dye (or craft from blue orchid flower)
+- **Magenta Dye** = Purple Dye + Pink Dye, or Blue Dye + Red Dye + Pink Dye (or craft from allium)
+- **Orange Dye** = Red Dye + Yellow Dye (or craft from orange tulip)
+- **Pink Dye** = Red Dye + White Dye (or craft from pink tulip or peony)
+- **Purple Dye** = Blue Dye + Red Dye (or craft from chorus fruit in a furnace — see note below)
+- **Gray Dye** = Black Dye + White Dye
+- **Light Gray Dye** = Gray Dye + White Dye, or Black Dye + White Dye + White Dye
+
+**Uses:** Secondary dyes double the color palette and are required for many decorative recipes. Magenta, purple, and pink are often used in banner patterns and firework stars.
+
+**Progression tip:** The 2-for-1 output of secondary dye recipes makes them efficient — you never lose dye value when combining. Keep a chest of each primary dye sorted by color, and you can mix any secondary on demand. For large builds, prioritize white dye (bone meal is infinite from a skeleton farm) and use it to stretch your other colors further in concrete and wool recipes.
+
+### Wool (All Colors)
+
+**Category:** Blocks
+**Tier:** Early-game
+
+**Recipe** (yields 1 colored wool)
+
+```
+[ ][ ][ ]
+[D][W][ ]
+[ ][ ][ ]
+```
+
+**Legend:** D = Any dye, W = White Wool
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Dye (any color) | 1 | See dye recipes above |
+| White Wool | 1 | Sheared from sheep, or crafted from 4 string |
+
+**How to craft:** Place one dye in the left-center cell and one white wool in the center cell. The dye tints the wool to its color. This works with all 16 dye colors.
+
+**Uses:** Colored wool is the classic building block for pixel art, banners, and decorative interiors. It is also used to craft beds (3 wool + 3 planks) and paintings. Note that colored wool cannot be re-dyed — you must start with white wool each time.
+
+**Progression tip:** Dyeing wool directly is simple, but for large builds, consider dyeing sheep instead. Right-click a sheep with dye to permanently color its wool, then shear it — it regrows in the dyed color, giving you infinite wool of that shade without spending more dye. This is the single most efficient way to mass-produce colored wool for big projects.
+
+### Concrete Powder
+
+**Category:** Blocks
+**Tier:** Mid-game
+
+**Recipe** (yields 8 concrete powder)
+
+```
+[S][S][S]
+[S][G][S]
+[S][S][S]
+```
+
+**Legend:** S = Sand, G = Gravel, D = Any dye
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Sand | 4 | Mined from beaches, deserts, and riverbeds |
+| Gravel | 4 | Mined from gravel patches in caves and beaches |
+| Dye (any color) | 1 | See dye recipes above |
+
+**How to craft:** Place four sand in a square in the top-left, top-center, left-center, and center cells. Place four gravel in the remaining outer cells (top-right, middle-right, bottom-left, bottom-center, bottom-right). Place one dye in the center cell. The recipe yields 8 concrete powder blocks of that color.
+
+**Uses:** Concrete powder is the intermediate step to solid concrete. When placed, it falls like sand and gravel. When it touches water (either falling into it or having water poured on it), it instantly solidifies into concrete — a smooth, brightly colored block with a clean modern look. Concrete is one of the most popular blocks for contemporary builds, roads, and large flat surfaces.
+
+**Progression tip:** Concrete powder is cheap and yields 8 blocks per craft, but it must touch water to harden. Build a concrete conversion station: place a row of powder blocks, then pour a water bucket over them — they instantly turn to concrete and become collectible with a pickaxe. For large quantities, set up a gravity block duper or a sand/gravel generator near your build site to avoid hauling thousands of blocks.
+
+### Stained Glass
+
+**Category:** Blocks
+**Tier:** Mid-game
+
+**Recipe** (yields 8 stained glass)
+
+```
+[G][G][G]
+[G][D][G]
+[G][G][G]
+```
+
+**Legend:** G = Glass, D = Any dye
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Glass | 8 | Smelt 1 sand in a furnace with any fuel |
+| Dye (any color) | 1 | See dye recipes above |
+
+**How to craft:** Place eight glass blocks in a ring around the outer cells of the crafting grid, leaving the center cell empty. Place one dye in the center cell. The recipe yields 8 stained glass blocks.
+
+**Uses:** Stained glass is decorative glazing that lets light through while adding color to windows, skylights, and aquariums. It can be crafted into stained glass panes (6 stained glass in the bottom two rows yields 16 panes) for thinner window frames. Note that stained glass does not conduct redstone signals and is transparent to light.
+
+**Progression tip:** Stained glass is the best way to add color to a build without blocking light. For large window walls, craft the panes version — 6 blocks yield 16 panes, making it far more material-efficient than solid blocks. Combine stained glass with sea lanterns or glowstone for dramatic lighting effects in modern builds.
+
+### Banner
+
+**Category:** Decoration
+**Tier:** Mid-game
+
+**Recipe** (yields 1 banner)
+
+```
+[ ][ ][ ]
+[W][W][W]
+[W][W][W]
+```
+
+**Legend:** W = White Wool (or any single color of wool)
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Wool (same color) | 6 | Sheared from sheep, or crafted from 4 string |
+
+**How to craft:** Place six wool blocks of the same color in the bottom two rows of the crafting grid (bottom row and middle row, all three cells each). Leave the top row empty. The wool weaves into one banner of that color.
+
+**Uses:** Banners are highly customizable decorative flags. You can place them on walls, floors, or shields (combine a banner with a shield in a crafting grid to apply the pattern). Using a loom (crafted from 2 planks and 2 string), you can apply dozens of patterns using dyes and banner pattern items. Banners are essential for decorating bases, marking territory, and creating custom shield designs.
+
+**Progression tip:** Banners are the deepest customization system in the game — a single banner can hold up to 6 layers of patterns, each applied in sequence at a loom. Copy a finished banner by placing it with a blank banner of the same base color in a crafting grid — this is the only way to duplicate complex designs. Use banners to mark your base, your chests, and your bed from a distance.
+
+### Glowstone
+
+**Category:** Blocks
+**Tier:** Mid-game
+
+**Recipe** (yields 1 glowstone)
+
+```
+[ ][ ][ ]
+[ ][G][ ]
+[ ][ ][ ]
+```
+
+**Legend:** G = Glowstone Dust
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Glowstone Dust | 4 | Dropped by glowstone blocks in the Nether, mined with any tool or by hand |
+
+**How to craft:** Place four glowstone dust in a 2×2 square in the crafting grid (top-left, top-center, left-center, and center cells). The dust compresses back into a solid glowstone block.
+
+**Uses:** Glowstone emits a light level of 15 — the brightest light source in the game, equal to a jack-o'-lantern but with a unique warm glow. It is used in redstone contraptions (it can be placed underwater and does not need support), in decorative builds, and as a component in brewing stands. Glowstone dust is also used to craft glow item frames and firework stars.
+
+**Progression tip:** Glowstone is the best all-around light source for end-game builds because it emits maximum light and can be placed underwater. Nether expeditions should always include a pickaxe for mining glowstone clusters — one block drops 2-4 dust, and 4 dust re-crafts into a block, so you can mine up to 4 blocks for every one you break. Carry a silk touch pickaxe to mine glowstone blocks directly, preserving the block form.
+
+*** Next: the brewing stand's secret depths — potions of night vision, invisibility, and the turtle master's brew.
+
+---
+
 ## APPENDIX — CRAFTING SHAPE PATTERNS
 
 | Item | Pattern (top row → middle → bottom) | Materials |
