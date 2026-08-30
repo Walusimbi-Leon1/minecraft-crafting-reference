@@ -2100,6 +2100,245 @@ This chapter moves beyond the functional blocks of the End to the vibrant world 
 
 ---
 
+## CHAPTER 20 — THE BREWER'S ART
+
+This chapter turns the brewing stand into a laboratory. Where earlier chapters covered basic potions of healing and fire resistance, here you'll master the full alchemical toolkit: the base waters, the rare ingredients that transform them, and the finished brews that carry you through the late game. Every recipe assumes a brewing stand fueled by blaze powder, with water bottles already filled.
+
+### Water Bottle
+**Category:** Brewing | **Tier:** Early-game
+
+**Recipe**
+```
+Brewing Stand: 3 glass bottles + 1 water source → 3 water bottles
+```
+**Legend:** Glass Bottle = crafted from 3 glass in a V-shape (bottom-left, bottom-center, bottom-right)
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Glass Bottle | 3 | Craft 3 glass (smelt sand in a furnace) into 3 bottles |
+| Water | 1 source | Any water block; right-click with bottles held |
+
+**How to craft:**
+1. Craft 3 glass bottles: place 3 glass blocks in a V-shape (left-bottom, center-bottom, right-bottom) in a crafting grid.
+2. Fill all 3 bottles by right-clicking a water source while holding them.
+3. Place the filled bottles in the bottom three slots of a brewing stand.
+
+**Uses:** Water bottles are the mandatory base for every potion in the game. Without them, no brewing can begin. They are also drinkable to restore no hunger but can be used to extinguish fire on yourself.
+
+**Progression tip:** Always carry a stack of empty glass bottles into the Nether — you can fill them from any water source you bring or find, and you'll need dozens for a full potion pantry. Fill bottles at a cauldron to save trips to open water.
+
+### Blaze Rod
+**Category:** Materials | **Tier:** Mid-game
+
+**Recipe**
+```
+Furnace: 1 blaze rod + any fuel → 2 blaze powder
+```
+**Legend:** Blaze Rod = dropped by blazes in Nether fortresses
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Blaze Rod | 1 | Dropped by blazes (0-1 per kill) in Nether fortresses |
+
+**How to craft:**
+1. Kill blazes in a Nether fortress until you collect at least 1 blaze rod.
+2. Place the blaze rod in the top slot of a furnace with any fuel below.
+3. Collect 2 blaze powder from the output slot.
+
+**Uses:** Blaze powder is the fuel for brewing stands — each piece powers one brewing operation. It is also a key ingredient in crafting the eyes that lead you to the End, and in making fire charges. Blaze rods themselves are the defining material of the Nether mid-game.
+
+**Progression tip:** A single blaze rod yields 2 powder, and each powder fuels one brew cycle of 3 bottles. Farm blazes early and stockpile rods — you'll need at least a dozen for a full end-game brewing setup, plus more for the journey to the End.
+
+### Nether Wart
+**Category:** Materials | **Tier:** Mid-game
+
+**Recipe**
+```
+Brewing Stand: 1 water bottle + 1 nether wart → 1 awkward potion
+```
+**Legend:** Nether Wart = grown on soulsand in the Nether, found in fortress gardens
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Nether Wart | 1 | Found growing in Nether fortress gardens; farm on soulsand |
+| Water Bottle | 1 | See above recipe |
+
+**How to craft:**
+1. Locate a Nether fortress and find the nether wart garden (small plots of soulsand with red plants).
+2. Harvest the nether wart; each plant drops 2-4 items.
+3. Place a water bottle in the brewing stand, add nether wart to the top slot, and brew.
+
+**Uses:** The awkward potion is the universal base for all effect potions — no other potion can be brewed directly from plain water. Nether wart is therefore the single most important brewing ingredient in the game. It can also be planted on soulsand to create an infinite farm.
+
+**Progression tip:** Before leaving the Nether, collect at least 20 nether wart — enough to start a farm. Plant it on soulsand blocks near your base; it grows in any dimension and matures in about 5 minutes. A single farm of 20 plants sustains infinite brewing forever.
+
+### Potion of Night Vision
+**Category:** Brewing | **Tier:** Mid-game
+
+**Recipe**
+```
+Brewing Stand: 1 awkward potion + 1 golden carrot → 1 potion of night vision
+```
+**Legend:** Golden Carrot = 8 gold nuggets surrounding 1 carrot (crafting grid)
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Awkward Potion | 1 | Brew nether wart into a water bottle |
+| Golden Carrot | 1 | Craft 1 carrot with 8 gold nuggets (carrot in center, nuggets around) |
+| Gold Nugget | 8 | Smelt gold tools/armor, or craft from 1 gold ingot (yields 9 nuggets) |
+| Carrot | 1 | Grown from seeds, found in village farms, or dropped by zombies |
+
+**How to craft:**
+1. Craft a golden carrot: place 1 carrot in the center of the crafting grid, surround it with 8 gold nuggets.
+2. Brew an awkward potion (nether wart + water bottle).
+3. Add the golden carrot to the brewing stand with the awkward potion.
+
+**Uses:** Night vision grants 8 minutes of full-brightness vision, making underwater exploration, cave diving, and Nether travel dramatically safer. It is also a required ingredient for the potion of invisibility.
+
+**Progression tip:** Night vision is the single best quality-of-life potion for mining and exploring. Brew it in bulk before any major cave expedition — 8 minutes per dose means one brewing session covers a full mining trip. Combine it with a respiration helmet for effortless underwater exploration.
+
+### Potion of Invisibility
+**Category:** Brewing | **Tier:** End-game
+
+**Recipe**
+```
+Brewing Stand: 1 potion of night vision + 1 fermented spider eye → 1 potion of invisibility
+```
+**Legend:** Fermented Spider Eye = 1 brown mushroom + 1 sugar + 1 spider eye (crafting grid)
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Potion of Night Vision | 1 | See previous recipe |
+| Fermented Spider Eye | 1 | Craft 1 brown mushroom + 1 sugar + 1 spider eye |
+| Brown Mushroom | 1 | Found in caves, forests, the Nether, or mushroom islands |
+| Sugar | 1 | Crafted from 1 sugar cane |
+| Spider Eye | 1 | Dropped by spiders (0-1 per kill) |
+
+**How to craft:**
+1. Craft the fermented spider eye: place the brown mushroom in the center, sugar to its left, spider eye to its right.
+2. Brew a potion of night vision (see above).
+3. Add the fermented spider eye to the brewing stand with the night vision potion.
+
+**Uses:** Invisibility renders you completely unseen by mobs for 3 minutes (8 minutes with redstone dust). Mobs will only detect you if you bump into them, and the effect persists while wearing armor — although armor becomes invisible too, making you truly untraceable.
+
+**Progression tip:** Invisibility is the ultimate stealth tool for the End — creepers, endermen, and even the dragon's minions will ignore you entirely. Brew it with redstone dust to extend it to 8 minutes, and combine with night vision to navigate while invisible. It is also the key ingredient for exploring woodland mansions without triggering the illager patrols.
+
+### Potion of Leaping
+**Category:** Brewing | **Tier:** Mid-game
+
+**Recipe**
+```
+Brewing Stand: 1 awkward potion + 1 rabbit's foot → 1 potion of leaping
+```
+**Legend:** Rabbit's Foot = dropped by rabbits (10% chance per kill)
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Awkward Potion | 1 | Brew nether wart into a water bottle |
+| Rabbit's Foot | 1 | Dropped by rabbits, or looted from desert temple chests |
+
+**How to craft:**
+1. Hunt rabbits (found in deserts, taigas, and flower forests) until one drops a rabbit's foot.
+2. Brew an awkward potion (nether wart + water bottle).
+3. Add the rabbit's foot to the brewing stand with the awkward potion.
+
+**Uses:** Leaping grants a 50% jump boost for 3 minutes, letting you clear 2-block-high obstacles and jump further while sprinting. With redstone dust it lasts 8 minutes; with glowstone dust it becomes a jump boost II that lets you leap 3 blocks high.
+
+**Progression tip:** Leaping is a niche but powerful mobility potion for parkour challenges, mountain climbing, and Nether fortress exploration. The rabbit's foot is the rarest ingredient in this chapter — farm rabbits with a looting sword to improve your odds, or trade with a butcher villager for a reliable source.
+
+### Potion of Swiftness
+**Category:** Brewing | **Tier:** Mid-game
+
+**Recipe**
+```
+Brewing Stand: 1 awkward potion + 1 sugar → 1 potion of swiftness
+```
+**Legend:** Sugar = crafted from 1 sugar cane
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Awkward Potion | 1 | Brew nether wart into a water bottle |
+| Sugar | 1 | Craft 1 sugar cane (found near water in most biomes) |
+
+**How to craft:**
+1. Harvest sugar cane growing beside water.
+2. Craft sugar: place 1 sugar cane anywhere in a crafting grid.
+3. Brew an awkward potion, then add the sugar to the brewing stand.
+
+**Uses:** Swiftness increases your movement speed by 20% for 3 minutes (8 minutes with redstone, 40% with glowstone for swiftness II). It is the standard travel potion for long-distance exploration, escaping hostile mobs, and traversing large builds quickly.
+
+**Progression tip:** Brew swiftness in bulk before any long journey — it stacks with the speed boost from soul speed boots and makes Nether travel dramatically safer. For extreme speed, brew swiftness II with glowstone dust and combine with a speed beacon for a 60% total boost.
+
+### Potion of Water Breathing
+**Category:** Brewing | **Tier:** Mid-game
+
+**Recipe**
+```
+Brewing Stand: 1 awkward potion + 1 pufferfish → 1 potion of water breathing
+```
+**Legend:** Pufferfish = caught by fishing, or found in buckets in ocean ruins
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Awkward Potion | 1 | Brew nether wart into a water bottle |
+| Pufferfish | 1 | Catch by fishing (5% chance with luck of the sea), or bucket from warm oceans |
+
+**How to craft:**
+1. Fish in any water body until a pufferfish is caught (use a luck of the sea rod for better odds).
+2. Brew an awkward potion (nether wart + water bottle).
+3. Add the pufferfish to the brewing stand with the awkward potion.
+
+**Uses:** Water breathing prevents oxygen depletion for 3 minutes (8 with redstone), allowing unlimited underwater exploration. It is essential for ocean monuments, underwater ruins, and building submerged bases. Combined with night vision, it makes underwater exploration completely effortless.
+
+**Progression tip:** This potion is the key to conquering ocean monuments and collecting sponges and prismarine. Brew a full stack before any major underwater expedition — the 8-minute extended version is far more practical than the base 3-minute brew. Carry a pufferfish farm (a simple fishing pool) near your base for infinite supplies.
+
+### Potion of the Turtle Master
+**Category:** Brewing | **Tier:** End-game
+
+**Recipe**
+```
+Brewing Stand: 1 awkward potion + 1 turtle shell → 1 potion of the turtle master
+```
+**Legend:** Turtle Shell = crafted from 5 scutes (see below)
+
+**Materials:**
+
+| Item | Qty | How to get it |
+|---|---|---|
+| Awkward Potion | 1 | Brew nether wart into a water bottle |
+| Turtle Shell | 1 | Craft 5 scutes in a U-shape (bottom row and sides of center) |
+| Scute | 5 | Dropped by baby turtles when they grow into adults |
+
+**How to craft:**
+1. Find a beach biome and locate a turtle nest with eggs.
+2. Wait for eggs to hatch; protect the baby turtles until they mature (each drops 1 scute).
+3. Craft 5 scutes into a turtle shell: place 3 in the bottom row, 1 on each side of the middle row.
+4. Brew an awkward potion, then add the turtle shell to the brewing stand.
+
+**Uses:** The turtle master potion grants resistance III (reduces damage by 60%) but slows you by 60% for 20 seconds. With redstone it lasts 40 seconds; with glowstone it becomes resistance IV (80% reduction) with a 90% slow. It is the ultimate defensive potion for boss fights.
+
+**Progression tip:** Despite the slow, this potion is the best in the game for tanking the Wither or the Ender Dragon — the resistance far outweighs the movement penalty when you're standing still to fight. Brew it with glowstone dust for maximum damage reduction, and pair it with a swiftness potion drunk just before to offset the slow. The turtle shell helmet itself also grants 10 seconds of water breathing when worn.
+
+*** Next: the crafter's workshop — automating your brewing with hoppers and the new crafter block.
+
+---
+
 ## APPENDIX — CRAFTING SHAPE PATTERNS
 
 | Item | Pattern (top row → middle → bottom) | Materials |
